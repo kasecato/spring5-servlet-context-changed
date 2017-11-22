@@ -1,0 +1,7 @@
+allprojects { project ->
+
+    tasks.withType(Test) {
+        systemProperties = System.properties // Spring 5 sets this to ServletContext and it can't be read /WEB-INF/ resources.
+    }
+
+}
